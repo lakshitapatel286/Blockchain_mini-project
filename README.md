@@ -1,88 +1,109 @@
 
 </head>
 <body>
-  <div class="container">
-    <h1>Mini Blockchain Project – Detailed Description</h1><p>
-  This project is a simplified yet fully functional simulation of how a blockchain works at its core. It is designed for learning purposes, academic submissions, and anyone wanting to understand the internal mechanisms of blockchain technology without diving into complex real‑world implementations. Everything is built from scratch using clean and easy‑to‑understand Python code.
-</p>
+  <main class="container">
+    <header>
+      <div class="logo"></div>
+      <div>
+        <h1>Mini Blockchain Project <small style="font-size:14px;color:var(--muted);">(Unit II)</small></h1>
+        <p class="lead">A simple, educational Python implementation demonstrating block creation, SHA-256 hashing, block linking, and RSA digital signatures.</p>
+        <div class="badges">
+          <span class="badge">Python 3</span>
+          <span class="badge">Educational</span>
+          <span class="badge">MIT License</span>
+        </div>
+      </div>
+    </header>
 
-<div class="card">
-  <h2>What This Project Demonstrates</h2>
-  <p>
-    The project showcases how a blockchain maintains secure, tamper‑proof data using cryptographic techniques. It includes the essential components that every blockchain—whether Bitcoin, Ethereum, or Hyperledger—uses at the fundamental level.
-  </p>
-  <ul>
-    <li>How blocks store data and get linked together through hashes.</li>
-    <li>How SHA‑256 hashing ensures integrity and immutability.</li>
-    <li>How transactions are verified using digital signatures.</li>
-    <li>How new blocks are added to the blockchain in sequence.</li>
-  </ul>
-</div>
-
-<div class="card">
-  <h2>What’s Inside the Project</h2>
-  <p>This project is made of three major components:</p>
-  <ol>
-    <li>
-      <strong>Block Class</strong> – Represents a single block containing:
+    <section>
+      <h2>Project Overview</h2>
+      <p>This mini-blockchain simulation includes the core ideas needed to understand how blockchains work internally. It's beginner-friendly and ideal for coursework demos:</p>
       <ul>
-        <li>Index (block number)</li>
-        <li>Timestamp</li>
-        <li>Transaction data</li>
-        <li>Previous block’s hash</li>
-        <li>Current block’s hash</li>
+        <li>Creating new blocks</li>
+        <li>Calculating SHA-256 hashes</li>
+        <li>Linking blocks using previous hashes</li>
+        <li>Adding and signing transactions</li>
+        <li>Verifying transaction authenticity</li>
       </ul>
-    </li>
-    <li>
-      <strong>Blockchain Class</strong> – Manages the entire chain by:
+    </section>
+
+    <section>
+      <h2>Features</h2>
       <ul>
-        <li>Creating the genesis (first) block</li>
-        <li>Adding new blocks</li>
-        <li>Verifying chain integrity</li>
+        <li><strong>Block Creation</strong> — Each block contains an index, timestamp, transaction data, previous hash, current hash, and a digital signature.</li>
+        <li><strong>SHA-256 Hashing</strong> — Uses Python's <code>hashlib</code> to compute cryptographic hashes.</li>
+        <li><strong>Block Linking</strong> — Each block stores the previous block's hash to form a tamper-evident chain.</li>
+        <li><strong>Digital Signatures</strong> — RSA is used to sign transactions with a private key and verify with the public key; invalid signatures are rejected.</li>
       </ul>
-    </li>
-    <li>
-      <strong>Digital Signature System</strong> – Ensures transactions are valid by:
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <p class="pill">Python 3</p>
+      <p class="pill">hashlib — SHA-256</p>
+      <p class="pill">json — data formatting</p>
+      <p class="pill">rsa — digital signatures</p>
+    </section>
+
+    <section>
+      <h2>How to Run</h2>
+      <p>Run the main script from the repository root:</p>
+      <pre><code>python blockchain.py</code></pre>
+      <p>Typical script behavior:</p>
       <ul>
-        <li>Generating private and public keys for a user</li>
-        <li>Signing a transaction using the private key</li>
-        <li>Verifying the signature with the public key</li>
+        <li>Generate RSA key pairs</li>
+        <li>Create example transactions</li>
+        <li>Sign transactions and verify authenticity</li>
+        <li>Add validated blocks to the blockchain</li>
+        <li>Display block details on the console</li>
       </ul>
-    </li>
-  </ol>
-  <p>
-    Together, these components allow the blockchain to securely store transactions where each block is cryptographically tied to the previous one.
-  </p>
-</div>
+    </section>
 
-<div class="card">
-  <h2>How the System Works Internally</h2>
-  <p>
-    When a new transaction is created, the system signs it using the sender's private key. This ensures authenticity and prevents anyone else from forging the transaction. The transaction is then added to a new block, along with its metadata.
-  </p>
-  <p>
-    The block is assigned a hash that is generated using the SHA‑256 hashing algorithm. This hash depends on the block's content, meaning even a tiny change will produce a completely different hash. Because each block stores the previous block’s hash, this creates a secure chain.
-  </p>
-  <p>
-    If anyone tries to modify a block, its hash changes, making all following blocks invalid. This is what makes blockchain tamper‑proof.
-  </p>
-</div>
+    <section>
+      <h2>Project Structure</h2>
+      <div class="file-structure">
+        <pre><code>├── blockchain.py         # Contains Block and Blockchain classes
+├── digital_signature.py  # Handles RSA key generation, signing, verification
+├── import_hashlib.py     # Utility file for hashing functions (SHA-256)
+├── main.py               # Runs the blockchain simulation
+├── README.md             # Project documentation
+</code></pre>
+      </div>
+    </section>
 
-<div class="card">
-  <h2>Purpose of This Project</h2>
-  <p>
-    The goal of this project is to give students and beginners a clear, practical understanding of blockchain fundamentals. It helps you learn:
-  </p>
-  <ul>
-    <li>The internal functioning of blockchains</li>
-    <li>Basics of cryptography (SHA‑256, digital signatures)</li>
-    <li>Data security and integrity</li>
-    <li>How linking blocks maintains tamper‑proof records</li>
-  </ul>
-</div>
+    <section>
+      <h2>Blockchain Validation</h2>
+      <p>The chain is validated by verifying:</p>
+      <ul>
+        <li>Hash integrity of each block</li>
+        <li>That each block's <code>previous_hash</code> matches the previous block's hash</li>
+        <li>Digital signature validity for each transaction</li>
+      </ul>
+    </section>
 
-<div class="card">
+    <section>
+      <h2>Digital Signature Workflow</h2>
+      <ol>
+        <li>Sign a transaction with a private RSA key.</li>
+        <li>Include the signature inside the block.</li>
+        <li>Use the sender's public RSA key to verify the signature.</li>
+        <li>If verification fails, the block will be rejected as invalid.</li>
+      </ol>
+    </section>
 
-  </div>
+    <section>
+      <h2>Contributing</h2>
+      <p>Contributions are welcome — open an issue or submit a pull request.</p>
+    </section>
+
+    <section>
+      <h2>License</h2>
+      <p>Released under the <strong>MIT License</strong>.</p>
+    </section>
+
+    <footer>
+      <p>Generated README — Mini Blockchain Project • Unit II</p>
+    </footer>
+  </main>
 </body>
 </html>
