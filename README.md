@@ -1,2 +1,8 @@
 # Blockchain_mini-project
-Building a Mini-Blockchain .Create a simple Python script or a similar program that simulates a blockchain. The program should include functions for creating new blocks, calculating SHA-256 hashes, and linking blocks. Include a feature that uses digital signatures to verify the authenticity of a transaction within a block.
+Simple Blockchain Simulation with Digital Signatures
+This project is a simple Python implementation of a blockchain. It demonstrates the core concepts of blockchain technology, including:
+-Block creation
+-SHA-256 hashing
+-Linking blocks using previous hash
+-Digital signatures for transaction authenticity verification
+
