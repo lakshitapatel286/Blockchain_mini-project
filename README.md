@@ -1,5 +1,6 @@
 # Blockchain_mini-project
-Simple Blockchain Simulation with Digital Signatures
+<b>Simple Blockchain Simulation with Digital Signatures</b>
+<br>
 This project is a simple Python implementation of a blockchain. It demonstrates the core concepts of blockchain technology, including:
 <br>
 -Block creation
