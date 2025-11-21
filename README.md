@@ -5,27 +5,27 @@ This project  include functions for creating new blocks, calculating SHA-256 has
 
 ---
 
-🚀 Features
+# Features
 
-✔ Create new blocks
+- Create new blocks
 
-✔ SHA-256 hashing
+- SHA-256 hashing
 
-✔ Linking blocks to form a chain
+- Linking blocks to form a chain
 
-✔ RSA digital signatures
+- RSA digital signatures
 
-✔ Signature verification before adding a block
+- Signature verification before adding a block
 
-✔ Check blockchain validity
+- Check blockchain validity
 
-✔ Beginner-friendly Python code
+- Beginner-friendly Python code
 
 
 
 ---
 
-🗂 Project Structure
+# Project Structure
 
 mini-blockchain
 <br>
@@ -42,9 +42,9 @@ mini-blockchain
 
 ---
 
-🧱 How It Works
+# How It Works
 
-🔐 1. Digital Signatures
+# 1. Digital Signatures
 
 - Every transaction is signed using a private key
 
@@ -55,7 +55,7 @@ mini-blockchain
 - Ensures authenticity & security
 
 
-⛓ 2. Blocks
+# 2. Blocks
 
 Each block contains:
 
@@ -71,7 +71,7 @@ Each block contains:
 
 - Current block hash
 
-🪢 3. Blockchain
+# 3. Blockchain
 
 - Starts with a Genesis Block
 
@@ -80,7 +80,7 @@ Each block contains:
 - Chain integrity is checked by recalculating hashes
 
 ---
- 📌 Example Output
+# Example Output
 
 ✔ Block added successfully!
 
@@ -94,26 +94,25 @@ Blockchain valid? True
 {'index': 1, 'transaction': 'Alice pays Bob 10 coins', ...}
 
 ---
+# Files Explained
 
-🔧 Files Explained
-
-1. block.py
+# 1. block.py
 - Defines the block structure and SHA-256 hashing.
   
-2. blockchain.py :
+# 2. blockchain.py :
 Handles:
 - creating genesis block
 - verifying signatures
 - adding new blocks
 -validating the chain
 
-3. digital_signature.py
+# 3. digital_signature.py
 
 Creates RSA keys:
 - Sign transaction with private key
 - Verify using public key
 
-4. main.py
+# 4. main.py
 Runs the whole blockchain:
 
 - Generates keys
@@ -123,7 +122,7 @@ Runs the whole blockchain:
 - Displays entire chain
 ---
 
-🎓 Purpose of This Project
+# Purpose of This Project
 
 This project is designed for learning:
 
